@@ -16,11 +16,10 @@ int main(){
     char control;
     do{
         biblioteca usuario;
-        cout<<"Seu nome: "; getline(cin,usuario.user);
+        cout<<"Seu nome: "; cin.ignore();getline(cin,usuario.user);
         cout<<"Quantidade de Livros: ";cin>>usuario.quantidade;
         for(int i=0;i<usuario.quantidade;i++){
-            cin.ignore();
-            string ler; cout<<"Insira o "<<i+1<<"º: ";getline(cin,ler);
+            string ler; cout<<"Insira o "<<i+1<<"º: ";cin.ignore();getline(cin,ler);
             usuario.titulos.push_back(ler);
         }
         cout<<endl;
@@ -28,7 +27,6 @@ int main(){
         cout<<"Click Y-for ADD new user or N-for exiting application"<<endl;
         cin>>control;
         system("clear");
-        cin.ignore();
     }while(control=='Y' or control=='y');
     return 0;
 }
