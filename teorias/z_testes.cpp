@@ -1,6 +1,6 @@
 /*
 PROGRAMA INCOMPLETO!!!!. Falta salvar os dados de cada usuario em um txt.
-Estudadar registros para realizar esta tarefa.....
+Estudar registros para realizar esta tarefa.....
 */
 
 #include <iostream>
