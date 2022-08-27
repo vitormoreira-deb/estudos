@@ -24,7 +24,7 @@ int main(){
             usuario.titulos.push_back(ler);
         }
         cout<<endl;
-//INSERÇÂO EM ARQUIVOS......
+//INSERÇÂO EM ARQUIVOS.....
         cout<<"Click Y-for ADD new user or N-for exiting application"<<endl;
         cin>>control;
         system("clear");
