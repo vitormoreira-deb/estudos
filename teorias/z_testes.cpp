@@ -1,21 +1,34 @@
+/*
+PROGRAMA INCOMPLETO!!!!. Falta salvar os dados de cada usuario em um txt.
+Estudadar registros para realizar esta tarefa.....
+*/
+
 #include <iostream>
-#include <string.h>
 #include <vector>
 using namespace std;
+struct biblioteca{
+    string user;
+    int quantidade;
+    vector<string>titulos;
+
+};
 int main(){
-    vector<int> vetornum;
-    string palavra;
-    cin>>palavra;
-    for(int n:palavra){
-        if(n=='0' or n=='1' or n=='2' or n=='3' or n=='4' or n=='5' or n=='6' or n=='7' or n=='8' or n=='9'){
-            vetornum.push_back((int(n)-48));
+    char control;
+    do{
+        biblioteca usuario;
+        cout<<"Seu nome: "; getline(cin,usuario.user);
+        cout<<"Quantidade de Livros: ";cin>>usuario.quantidade;
+        for(int i=0;i<usuario.quantidade;i++){
+            cin.ignore();
+            string ler; cout<<"Insira o "<<i+1<<"º: ";getline(cin,ler);
+            usuario.titulos.push_back(ler);
         }
-    }
-    for(int n:vetornum){
-        cout<<n<<" || ";
-    }
-    cout<<endl;
-    cout<<"Tamanho do vetor numerado>> "<<vetornum.size();
-    cout<<endl;
+        cout<<endl;
+//INSERÇÂO EM ARQUVOS......
+        cout<<"Click Y-for ADD new user or N-for exiting application"<<endl;
+        cin>>control;
+        system("clear");
+        cin.ignore();
+    }while(control=='Y' or control=='y');
     return 0;
 }
